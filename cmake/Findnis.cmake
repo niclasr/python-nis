@@ -11,6 +11,7 @@ cmake_push_check_state(RESET)
 set(CMAKE_REQUIRED_QUIET ON)
 
 set(test_src "
+#include <sys/types.h>
 #include <rpc/rpc.h>
 #include <rpcsvc/ypclnt.h>
 #include <rpcsvc/yp_prot.h>
