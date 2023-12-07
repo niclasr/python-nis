@@ -8,6 +8,7 @@ if(TARGET nis::nis)
 endif()
 
 cmake_push_check_state(RESET)
+set(CMAKE_REQUIRED_QUIET ON)
 
 set(test_src "
 #include <rpc/rpc.h>
@@ -29,7 +30,7 @@ endif()
 if(NOT NIS_IN_LIBC AND (CMAKE_SYSTEM_NAME STREQUAL "Linux"))
 find_package(PkgConfig QUIET)
   if(PKG_CONFIG_FOUND)
-    pkg_check_modules(LIBNSL REQUIRED IMPORTED_TARGET libnsl)
+    pkg_check_modules(LIBNSL REQUIRED QUIET IMPORTED_TARGET libnsl)
     if(TARGET PkgConfig::LIBNSL)
       set(CMAKE_REQUIRED_LIBRARIES PkgConfig::LIBNSL)
       check_c_source_compiles("${test_src}" NIS_IN_PKG)

@@ -12,9 +12,3 @@ target_link_libraries(nis PRIVATE Python3::Module)
 target_link_libraries(nis PRIVATE nis::nis)
 
 install(TARGETS nis DESTINATION "${Python3_SITEARCH}")
-
-message("Python3_SITEARCH: ${Python3_SITEARCH}")
-message("Python3_SITELIB: ${Python3_SITELIB}")
-message("Python3_STDLIB: ${Python3_STDLIB}")
-message("Python3_STDARCH: ${Python3_STDARCH}")
-message("CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
