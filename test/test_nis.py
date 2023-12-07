@@ -4,9 +4,7 @@ import warnings
 import nis
 
 # Skip test if nis module does not exist.
-#with warnings.catch_warnings():
-#    warnings.simplefilter("ignore", DeprecationWarning)
-#    nis = import_helper.import_module('nis')
+nis = import_helper.import_module('nis')
 
 
 class NisTests(unittest.TestCase):
