@@ -1,1 +1,2 @@
 # python-nis
+Stand-alone version of the former python built-in nis module.
